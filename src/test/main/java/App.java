@@ -3,6 +3,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class App {
     public static void main(String[] args) {
+        Boolean sr;
         ApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
         HelloWorld bean1 =
@@ -17,5 +18,8 @@ public class App {
 
         System.out.println(cat1.getMessage());
         System.out.println(cat2.getMessage());
+
+        System.out.println(bean1.equals(bean2));
+        System.out.println(cat1.equals(cat2));
     }
 }
